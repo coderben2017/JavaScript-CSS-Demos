@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>纯js模拟时钟插件analogClock.js</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css" />
+	<style type="text/css">
+		.clock{
+			width: 400px;
+			margin: 30px auto;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+    <div id="clock1" class="clock"></div>
+    <div id="clock2" class="clock"></div>
+    <div id="clock3" class="clock"></div>
+    <div id="clock4" class="clock"></div>		
+	</div>
+	
+	<script src="../bootstrap-3.3.7/js/jquery-1.9.1.min.js"></script>
+	<script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/analogClock.js"></script>
+	    <script>
+	        AnalogClock("clock1");//simple use
+	        AnalogClock("clock2", { width: 300, bgColor: "#bf0" });//simple option
+	        AnalogClock("clock3", new AnalogClockOption(200, "#eee", "#333"));//using option class to customize
+
+	        //base on object use, returns an clock object, can do some further style controll by the returned object.
+	        var opt = new AnalogClockOption(); opt.width = 100;
+	        var clock = new AnalogClock("clock4", opt);
+	        clock.panel.style.border = "solid 1px red";
+	    </script>
+</body>
+</html>
