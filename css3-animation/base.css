@@ -1,0 +1,52 @@
+div{  
+    width:200px;  
+    height:130px;  
+    background-color:red;  
+    padding:20px;  
+    text-align:center;  
+    font-size:18px;  
+    font-family:"幼圆";  
+      
+    /*设置动画及播放时间*/  
+    animation:myfirst 5s;  
+    /*设置动画轮播次数*/  
+    animation-iteration-count:100;  
+}     
+/*规定动画效果*/  
+@keyframes myfirst{  
+0%{  
+    background-color:#F33;  
+    margin-left:0;  
+    margin-top:0;     
+    font-size:18px;  
+    transform:rotate(-30deg);  
+}  
+25%{  
+    background-color:yellow;  
+    margin-left:200px;  
+    margin-top:0;  
+    font-size:26px;  
+    /*顺时针旋转45度*/  
+    transform:rotate(30deg);  
+}  
+50%{  
+    background-color:#06F;  
+    margin-left:200px;  
+    margin-top:200px;  
+    font-size:18px;  
+    transform:rotate(-30deg);  
+}  
+75%{  
+    background-color:#0C0;  
+    margin-left:0;  
+    margin-top:200px;  
+    font-size:26px;  
+    transform:rotate(30deg);  
+}  
+100%{  
+    background-color:#F33;  
+    margin-left:0;  
+    margin-top:0;  
+    font-size:18px;  
+    transform:rotate(-30deg);  
+}  
