@@ -1,0 +1,52 @@
+/*
+ File Name: NineGrid_main.css
+ For Html: NineGrid.html
+*/
+body{
+	margin: 0;
+	padding: 0;
+}
+
+/*1个大盒子*/
+div.grid_wrapper{
+	width: 260px;/*..80*3+5*4..*/
+	height: 260px;
+	padding: 0;
+	margin:0 auto;/*水平局中*/
+
+	/*border: green 1px solid;*/
+}
+
+/*9个小格子*/
+.grid{
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+/*-----定义格子链接的访问状态-----*/
+/*未访问和已访问过*/
+.grid a:link, .grid a:visited{
+	width: 80px;
+	height: 80px;
+	border: #ccc 5px solid;
+	float: left;
+	text-decoration: none;
+	text-align: center;
+	line-height: 80px;
+	font-size: 30px;
+	font-family: Arial,Verdana,Sans-serif;
+
+	margin-left: -5px;
+	margin-top: -5px;
+	position: relative;
+	z-index: 1;/*堆叠顺序*/
+}
+/*鼠标悬停*/
+.grid a:hover{	
+	border-color: #000;
+	z-index: 2;
+}
+/*鼠标按下*/
+.grid a:active{
+	border-color: #f00;
+}
